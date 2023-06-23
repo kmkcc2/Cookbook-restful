@@ -5,12 +5,12 @@ import com.example.demo.entity.Recipe;
 import com.example.demo.repository.IngredientRepository;
 import com.example.demo.repository.ProductRepository;
 import com.example.demo.repository.RecipeRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Optional;
 
@@ -35,7 +35,6 @@ public class RecipeService {
         HashMap response = new HashMap<>();
         HashMap ingredients = new HashMap();
         if (recipe.isPresent()) {
-
             int recipe_id = recipe.get().getId();
             HashMap singleIngredient;
             Iterable<Ingredient> igredients = ingredientRepository.findAll();
@@ -53,7 +52,6 @@ public class RecipeService {
             response.put("title", recipe.get().getTitle());
             response.put("description", recipe.get().getDescription());
             response.put("ingredients", ingredients);
-
 
             return ResponseEntity.ok().body(response);
         } else {

@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "RECIPE_TABLE")
 public class Recipe {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

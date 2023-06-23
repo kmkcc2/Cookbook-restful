@@ -2,7 +2,7 @@ package com.example.demo.service;
 
 import com.example.demo.entity.Ingredient;
 import com.example.demo.repository.IngredientRepository;
-import com.example.demo.repository.ProductRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
