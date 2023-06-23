@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -33,8 +32,35 @@ public class ProductService {
     }
 
     @PostMapping
-    public Product saveProduct(@Validated @RequestBody Product product){
+    public Product addProduct(@Validated @RequestBody Product product){
         return repository.save(product);
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity deleteProduct(@PathVariable(value = "id") int id)
+    {
+        Product product = repository.findById(id).orElse(null);
+        if(product == null){
+            return ResponseEntity.notFound().build();
+        }else{
+            repository.delete(product);
+            return ResponseEntity.noContent().build();
+        }
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity putProduct(@PathVariable(value = "id") int id, @Validated @RequestBody Product newProduct)
+    {
+        repository.findById(id)
+                .map(product -> {
+                    product.setName(newProduct.getName());
+                    return repository.save(product);
+                })
+                .orElseGet(() -> {
+                    newProduct.setId(id);
+                    return repository.save(newProduct);
+                });
+        return ResponseEntity.ok().body(newProduct);
     }
 
 }
