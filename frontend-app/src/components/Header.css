@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  width: 100%vw;
+  gap: 1.5em;
+  background-color: gray;
+  padding: 1em;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.header-option {
+  border-right: 1px black solid;
+  padding: 0.5em;
+}
+
+.header-option:hover {
+  background-color: rgb(185, 185, 185);
+  cursor: pointer;
+}
+.request-counter {
+  padding: 0.5em;
+  margin-left: auto;
+}
