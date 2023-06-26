@@ -17,4 +17,5 @@ public class Recipe {
     private int id;
     private String title;
     private String description;
+    private String products;
 }
