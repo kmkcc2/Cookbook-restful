@@ -19,7 +19,7 @@ public class RecipeService {
     private RecipeRepository recipeRepository;
 
     @GetMapping
-    public Iterable<Recipe> getProducts() {
+    public Iterable<Recipe> getRecipes() {
         return recipeRepository.findAll();
     }
 
