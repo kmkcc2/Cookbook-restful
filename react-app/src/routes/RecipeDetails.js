@@ -2,38 +2,11 @@ import { useLoaderData } from "react-router";
 import classes from "./RecipeDetails.module.css";
 import bin from "../icons/trash-bin.png";
 import edit from "../icons/editing.png";
-import { useState } from "react";
-import Modal from "../components/Modal/Modal";
-import ConfirmAlert from "../components/Common/ConfirmAlert";
-
+import { Link } from "react-router-dom";
+import { Outlet } from "react-router";
 export default function RecipeDetails() {
-  const [deleteDialog, setDeleteDialog] = useState(false);
-
-  function onDeleteHandler() {
-    // function deleteRecipe() {
-    //   console.log(chosenId);
-    //   fetch("http://localhost:9090/api/recipe/" + chosenId, {
-    //     method: "DELETE",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-    //   hideConfirmDialogHandler();
-    //   setRecipeList(
-    //     recipeList.filter((recipe) => {
-    //       return recipe.id !== chosenId;
-    //     })
-    //   );
-  }
 
   function onEditHandler() {}
-  function showConfirmDialogHandler() {
-    setDeleteDialog(true);
-  }
-
-  function hideConfirmDialogHandler() {
-    setDeleteDialog(false);
-  }
 
   const recipe = useLoaderData();
   if (recipe === null) {
@@ -41,21 +14,14 @@ export default function RecipeDetails() {
   } else {
     return (
       <div className={classes.container}>
-        {deleteDialog && (
-          <Modal onClose={hideConfirmDialogHandler}>
-            <ConfirmAlert
-              onCancel={hideConfirmDialogHandler}
-              onConfirm={onDeleteHandler}
-            />
-          </Modal>
-        )}
+        <Outlet />
         <div className={classes.subMenu}>
           <button className={classes.editButton} onClick={onEditHandler}>
             <img src={edit} alt="edit" />
           </button>
-          <button className={classes.deleteButton} onClick={showConfirmDialogHandler}>
+          <Link to="delete"><button className={classes.deleteButton}>
             <img src={bin} alt="trash" />
-          </button>
+          </button></Link>
         </div>
         <div className={classes.flexRow}>
           <h1>{recipe.title}</h1>

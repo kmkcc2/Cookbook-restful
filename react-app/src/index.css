@@ -15,4 +15,6 @@ code {
 a{
   text-decoration: none;
   color: white;
+  margin-top: auto;
+  margin-bottom: auto;
 }

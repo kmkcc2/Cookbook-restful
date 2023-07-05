@@ -35,7 +35,7 @@ export default function NewPostForm(props) {
             ></input>
           </div>
           <div className={classes.flexRow}>
-            <Link to="/">
+            <Link style={{display: 'flex'}} to="/">
               <button className={classes.cancelButton} type="button">
                 Cancel
               </button>

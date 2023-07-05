@@ -1,11 +1,6 @@
 import Post from "./Post";
 import classes from "./PostsList.module.css";
-import { useState, useEffect } from "react";
-import Modal from "../Modal/Modal";
-import ConfirmAlert from "../Common/ConfirmAlert";
 import { useLoaderData } from "react-router";
-
-var chosenId = -1;
 
 export default function PostsList() {
   const recipeList = useLoaderData();

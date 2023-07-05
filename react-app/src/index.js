@@ -3,12 +3,16 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import Recipes, { loader as recipeLoader } from "./routes/Recipes";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import NewPostForm, { action as newRecipeAction } from "./routes/NewPostForm";
+import NewPostForm, {
+  action as newRecipeAction,
+} from "./routes/NewPostForm";
 import RootLayout from "./routes/RootLayout";
 import RecipeDetails, {
   loader as getRecipeLoader,
 } from "./routes/RecipeDetails";
-
+import DeleteRecipe, {
+  action as deleteRecipeAction,
+} from "./routes/DeleteRecipe";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -30,6 +34,14 @@ const router = createBrowserRouter([
         path: "/recipe/:id",
         element: <RecipeDetails />,
         loader: getRecipeLoader,
+        id: 'recipeRoot',
+        children: [
+          {
+            path: "delete",
+            element: <DeleteRecipe />,
+            action: deleteRecipeAction,
+          },
+        ],
       },
     ],
   },
