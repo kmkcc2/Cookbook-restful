@@ -1,5 +1,5 @@
 import Modal from "../components/Modal/Modal";
-import CustomButton from "../components/Common/Button";
+import CustomButton from "../components/Common/CustomButton";
 import classes from "./DeleteRecipe.module.css";
 import { Link, redirect, useRouteLoaderData } from "react-router-dom";
 import { Form } from "react-router-dom";

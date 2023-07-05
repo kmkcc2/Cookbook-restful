@@ -4,6 +4,7 @@ import bin from "../icons/trash-bin.png";
 import edit from "../icons/editing.png";
 import { Link } from "react-router-dom";
 import { Outlet } from "react-router";
+
 export default function RecipeDetails() {
 
   function onEditHandler() {}
@@ -16,9 +17,9 @@ export default function RecipeDetails() {
       <div className={classes.container}>
         <Outlet />
         <div className={classes.subMenu}>
-          <button className={classes.editButton} onClick={onEditHandler}>
+        <Link to="edit"><button className={classes.editButton} onClick={onEditHandler}>
             <img src={edit} alt="edit" />
-          </button>
+          </button></Link>
           <Link to="delete"><button className={classes.deleteButton}>
             <img src={bin} alt="trash" />
           </button></Link>

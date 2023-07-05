@@ -1,6 +1,6 @@
 import classes from "./Header.module.css";
 import Logo from "./Logo";
-import CustomButton from "../Common/Button";
+import CustomButton from "../Common/CustomButton";
 import { Link } from "react-router-dom";
 
 export default function Header(props) {

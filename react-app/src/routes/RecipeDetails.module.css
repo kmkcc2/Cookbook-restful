@@ -11,11 +11,11 @@
   outline: none;
   border: none;
   transition-duration: 0.2s;
-  transform: scale(2);
+  transform: scale(1.5);
 }
 .subMenu button:hover {
   cursor: pointer;
-  transform: scale(2.5);
+  transform: scale(2);
 }
 .flexRow {
   display: flex;
