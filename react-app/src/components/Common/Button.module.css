@@ -1,0 +1,28 @@
+.newPostButton{
+    margin-top: auto;
+    margin-bottom: auto;
+    height: 4em;
+    width: 9em;
+    border: none;
+    border-radius: 0.3em;
+    -webkit-box-shadow: 0px 7px 13px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: 0px 7px 13px -7px rgba(66, 68, 90, 1);
+    box-shadow: 0px 7px 13px -7px rgba(66, 68, 90, 1);
+    font-weight: bold;
+    transition-duration: .1s;
+}
+
+.newPostButton:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+.newPostButton:active{
+    -webkit-box-shadow: inset 0px 7px 13px -7px rgba(66, 68, 90, 1);
+    -moz-box-shadow: inset 0px 7px 13px -7px rgba(66, 68, 90, 1);
+    box-shadow: inset 0px 7px 13px -7px rgba(66, 68, 90, 1);
+
+}
+.newPostButton a {
+    color:black;
+    text-decoration: none;
+}

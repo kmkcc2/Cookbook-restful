@@ -1,0 +1,13 @@
+.logo {
+  font-weight: bold;
+  font-size: xx-large;
+  display: flex;
+  gap: 3%;
+}
+img {
+  max-width: 2em;
+  max-height: 50%;
+  height: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}

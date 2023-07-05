@@ -1,9 +1,0 @@
-.Container {
-  padding: 1em;
-}
-.flex-column {
-  display: flex;
-  flex-direction: column;
-  width: 10%;
-  gap: 1em;
-}

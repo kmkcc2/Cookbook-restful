@@ -1,0 +1,13 @@
+.headerContainer{
+    padding: 4% 4% 0 4%;
+}
+
+.headerBar{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2%;
+}
+.headerBar a {
+    margin-top: auto;
+    margin-bottom: auto;
+}

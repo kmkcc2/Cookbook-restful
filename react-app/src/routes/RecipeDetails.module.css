@@ -1,0 +1,35 @@
+.container {
+  padding: 2% 4% 0 4%;
+}
+.subMenu {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2em;
+}
+.subMenu button {
+  background: none;
+  outline: none;
+  border: none;
+  transition-duration: 0.2s;
+  transform: scale(2);
+}
+.subMenu button:hover {
+  cursor: pointer;
+  transform: scale(2.5);
+}
+.flexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.flexColumns {
+    display: flex;
+    justify-content: space-between;
+}
+.firstColumn{
+    width: 55%;
+}
+.secondColumn{
+    width: 45%;
+}
+

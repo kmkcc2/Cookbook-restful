@@ -1,0 +1,51 @@
+.recipe{
+    border-radius: 0.5em;
+    background: rgb(32, 25, 70, 0.35);
+    padding: 1em;
+    transition: transform .2s;
+    overflow-x: hidden;
+    max-height: 10em;
+}
+
+.recipe:hover{
+    cursor: pointer;
+    background: rgb(32, 25, 70, 0.6);
+    transform: scale(1.05);
+}
+
+.title, .author{
+    font-weight: bold;
+}
+.title::first-letter{
+    text-transform: capitalize;
+}
+.author{
+    font-style: italic;
+}
+.author::before{
+    content: "~";
+}
+.description{
+    font-size: larger;
+}
+
+.description::first-letter{
+    text-transform: capitalize;
+}
+
+.flexSpaceBetween{
+    display: flex;
+    justify-content: space-between;
+}
+.deleteButton{
+    border: none;
+    outline: none;
+    background: none;
+    transition-duration: .1s;
+}
+
+.deleteButton:hover{
+    cursor: pointer;
+    transform: scale(1.5);
+    transition-duration: .1s;
+}
